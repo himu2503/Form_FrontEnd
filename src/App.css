@@ -8,38 +8,36 @@
 }
 
 body {
-  background: radial-gradient(circle at top right, #0a0f24 0%, #02030a 100%);
-  color: #e0e0e0;
+  background-color: #1f2330;
+  color: #ffffff;
   padding: 20px;
 }
 
-/* Header */
 h1 {
   text-align: center;
-  background: linear-gradient(45deg, #0063ff, #00e3ff);
+  background-color: #3cade5;
   color: white;
   padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 150, 255, 0.3);
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Form Container */
 form {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
-  background: #111527;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.2);
+  max-width: 1000px;
+  background-color: #2b2f3e;
+  padding: 30px;
+  margin: 0 auto;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Labels and Inputs */
 form label {
   display: block;
   font-weight: bold;
-  margin-top: 20px;
-  color: #cfcfcf;
+  margin-top: 15px;
+  color: #ffffff;
 }
 
 form input[type="text"],
@@ -49,69 +47,96 @@ form input[type="date"],
 form input[type="number"],
 form input[type="file"] {
   width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border: 1px solid #333849;
-  background: #1a1f33;
-  color: #e0e0e0;
-  border-radius: 6px;
-  transition: border 0.2s ease;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #222843;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
+/* White glow on focus */
 form input:focus {
   outline: none;
-  border-color: #0096ff;
-  box-shadow: 0 0 6px rgba(0, 150, 255, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.6);
+  background-color: #2f3550;
 }
 
-/* Checkbox */
-input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-/* Image Previews */
 .preview-box {
-  margin-top: 12px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .preview-box img {
-  border: 1px solid #444;
-  border-radius: 6px;
-  padding: 4px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 5px;
   max-height: 120px;
-  background-color: #fff;
 }
 
-/* Button Row */
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.captcha-box {
+  background-color: #333;
+  padding: 5px 10px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+}
+
+.submit {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reset {
+  background-color: #0062cc;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 .button-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
-}
-
-/* Buttons */
-button,
-.submit,
-.reset,
-.button {
-  padding: 14px 28px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: linear-gradient(45deg, #0063ff, #00e3ff);
-  color: white;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 99, 255, 0.5);
+  margin-top: 20px;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 99, 255, 0.7);
+  background-color: #0593ec;
 }
 
-/* Modal Styling */
+#downloadSection {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .modal {
   display: flex;
   align-items: center;
@@ -122,65 +147,53 @@ button:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-  background: #1a1f33;
+  background-color: #2b2f3e;
   padding: 30px;
-  border: 1px solid #333849;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
-  color: #e0e0e0;
+  border: 1px solid #888;
+  width: 300px;
+  border-radius: 8px;
   text-align: center;
   position: relative;
-  width: 320px;
+  color: white;
 }
 
 .modal-content input {
-  width: 85%;
+  width: 80%;
   padding: 10px;
   margin-top: 15px;
   font-size: 16px;
-  background: #2a2f44;
-  border: 1px solid #444a60;
-  border-radius: 6px;
-  color: #fff;
+  background-color: #222843;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+  border-color: white;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.5);
+  outline: none;
 }
 
 .modal-content button {
-  margin-top: 20px;
-  padding: 12px 25px;
+  margin-top: 15px;
+  padding: 10px 20px;
   font-size: 15px;
-  background: linear-gradient(45deg, #0063ff, #00e3ff);
-  border: none;
-  border-radius: 6px;
+  background-color: #2a7faa;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 150, 255, 0.3);
+  border: none;
+  border-radius: 5px;
 }
 
 .close {
   position: absolute;
   right: 15px;
   top: 10px;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
-  color: #fff;
-}
-
-/* Download Button Section */
-#downloadSection {
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Animation */
-form,
-.modal {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  color: white;
 }
